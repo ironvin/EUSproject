@@ -1,0 +1,9 @@
+UnitId,BuildingName,UnitNumber,ThresholdKwh
+6,Hawthorne Heights,201,500.0
+7,Hawthorne Heights,202,600.0
+8,Hawthorne Heights,203,700.0
+1,Maple Grove Apartments,1A,650.0
+2,Maple Grove Apartments,1B,550.0
+3,Maple Grove Apartments,2A,800.0
+4,Riverbend Towers,101,900.0
+5,Riverbend Towers,102,850.0
