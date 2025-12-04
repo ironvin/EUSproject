@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <title>Energy Usage System | Manual</title>
+    <style>
+    @font-face {
+      font-family: 'Inter';
+      src: url('/fonts/inter/Inter-Regular.woff2') format('woff2');
+    }
+    
+    * {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        box-sizing: border-box;
+    }
+    
+    html {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        background: rgb(25, 32, 32);
+        color: #2c3e50;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        background: rgb(30, 30, 30);
+        min-height: 100vh;
+        box-shadow: 0 0 20px rgba(186, 186, 186, 0.078);
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #cbd5ea;
+        margin: 0 0 10px 0;
+        letter-spacing: -0.02em;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: #598fee;
+        margin: 40px 0 20px 0;
+        padding-top: 20px;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #688ccb;
+        margin: 25px 0 15px 0;
+    }
+    
+    p {
+        margin: 0 0 16px 0;
+        color: #adb5c2;
+        line-height: 1.7;
+    }
+    
+    hr {
+        height: 1px;
+        background: linear-gradient(to right, #e2e8f0, #cbd5e0, #e2e8f0);
+        border: none;
+        margin: 30px 0;
+    }
+    
+    ol {
+        margin: 20px 0;
+        padding-left: 25px;
+        color: #adb5c2;
+    }
+    
+    ol li {
+        margin: 10px 0;
+        padding-left: 10px;
+        line-height: 1.5;
+    }
+    
+    strong {
+        color: #859dc5;
+        font-weight: 600;
+    }
+    
+    .note {
+        background: #464231;
+        border-left: 4px solid #f59e0b;
+        padding: 16px 20px;
+        margin: 20px 0;
+        border-radius: 0 4px 4px 0;
+    }
+    
+    .note strong {
+        color: #cbb66c;
+    }
+    
+    .note p {
+        margin: 0;
+        color: #e7e8d9;
+    }
+    
+    .note-inline {
+        background: #3a3a2d;
+        border-left: 3px solid #f59e0b;
+        padding: 10px 15px;
+        margin: 10px 0 0 0;
+        border-radius: 0 3px 3px 0;
+        font-size: 0.9rem;
+    }
+    
+    .note-inline p {
+        margin: 0;
+        color: #d4d5c7;
+        font-style: italic;
+    }
+    
+    .option-description {
+        background: #f7fafc;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
+    }
+    
+    .option-description p {
+        margin: 0;
+    }
+    
+    @media (max-width: 768px) {
+        .container {
+            padding: 30px 20px;
+        }
+        
+        h1 {
+            font-size: 2rem;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Energy Usage System Manual</h1>
+        <hr>
+        
+        <h2>Running the Program</h2>
+        
+        <p>When you log in as the Manager, the system loads all existing buildings, units, and usage records, then presents you with a numbered menu. You interact with the app entirely through these menu choices. Each option provides different types of information or performs an action.</p>
+        
+        <p><strong>Main Menu Options:</strong></p>
+        <ol start="0">
+            <li>Exit the program</li>
+            <li>View building overview</li>
+            <li>View monthly summary for all buildings</li>
+            <li>View per-unit usage and thresholds</li>
+            <li>View alerts and export to CSV</li>
+            <li>Demo to simulate an over-usage scenario</li>
+            <li>Export building and unit data to CSV</li>
+            <li>Export usage history for charting</li>
+            <li>Show a usage bar chart inside the console</li>
+        </ol>
+        
+        <div class="note">
+            <p><strong>Note:</strong> Running the Program as the Administrator will prevent you from using Options 5 and 6.</p>
+        </div>
+        
+        <h3>Option 1: Building Overview</h3>
+        <p>Shows an overview of every building in the system. For each building, you see the energy rate it uses and the number of units it contains. You get a simple numbered list of every building, which is useful for a quick top-level snapshot.</p>
+        
+        <h3>Option 2: Monthly Summary</h3>
+        <p>Shows a monthly summary for all buildings at once. It displays total energy consumption and total cost for the month for each building. This gives you a bird's-eye view of which buildings consume the most energy and how much they cost.</p>
+        
+        <h3>Option 3: Per-Unit Usage</h3>
+        <p>Shows detailed per-unit usage for the month. It groups units under their respective buildings. Each unit displays its energy usage, its threshold, and whether the usage is within acceptable limits or exceeds the threshold. This is where the Manager checks whether individual tenants or rooms are hitting concerning levels.</p>
+        
+        <h3>Option 4: Alerts</h3>
+        <p>Shows any alerts for the month. Alerts appear only when a unit goes past its threshold. If anything exceeds its limit, it will appear here. This option also lets you create a CSV file containing the alerts, allowing you to review them or share them externally.</p>
+        
+        <h3>Option 5: Demo Mode</h3>
+        <p>A demo tool that artificially simulates an over-usage event in one unit. After running it, you can go back to the alerts section to see a new alert appear. This option is mainly for testing or demonstration.</p>
+        <div class="note-inline">
+            <p>This option can only be used from a Manager account.</p>
+        </div>
+        
+        <h3>Option 6: Export Building Data</h3>
+        <p>Exports all building and unit data into CSV files. This includes building names, rates, unit IDs, thresholds, and any other identifying information the system manages. Managers can open these files in external tools for auditing or reporting.</p>
+        <div class="note-inline">
+            <p>This option can only be used from a Manager account.</p>
+        </div>
+        
+        <h3>Option 7: Export Usage History</h3>
+        <p>Exports usage over time into a CSV tailored for charting. This is meant to be opened in spreadsheet software so you can easily generate line graphs or trend visuals.</p>
+        
+        <h3>Option 8: Console Chart</h3>
+        <p>Prints a simple bar-style chart directly in the console. Each building is displayed with a bar scaled to its total usage for the month. This gives a quick visual comparison without leaving the app.</p>
+        
+        <h3>Option 0: Exit</h3>
+        <p>Exits the Manager interface entirely.</p>
+        
+        <hr>
+        
+        <p>&copy; Copyright 2025 CIS129-1 SCAM Team. All rights reserved.</p>
+    </div>
+</body>
+</html>
