@@ -17,7 +17,10 @@ After downloading the zip file, you can build the entire project manually in Vis
 | Administrator | SuperCoolBuilding123 |
 | Manager | ManagerPassword123 |
 
+The user manual can help you to understand how to use the program. It's reliable for surface-level understanding only, though.
+
 #### If any issues should arise, please contact me or our team directly.
 
 (c) Copyright 2025. All rights reserved.
+
 
